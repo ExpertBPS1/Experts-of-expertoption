@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experts of ExpertOption</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
+    header { background: linear-gradient(135deg, #0f3460, #1a1a2e); color: white; padding: 2rem; text-align: center; position: relative; overflow: hidden; }
+    header img { width: 80px; margin-bottom: 1rem; animation: zoomIn 1s ease forwards; }
+    header::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: 200%;
+      height: 200%;
+      background-image: url('https://cdn.pixabay.com/photo/2016/11/29/05/12/chart-1869114_1280.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1;
+      z-index: 0;
+    }
+    header > * { position: relative; z-index: 1; }
+    nav { background-color: #16213e; padding: 1rem; text-align: center; }
+    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: 600; }
+    section { padding: 3rem 2rem; max-width: 1100px; margin: auto; opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+    section.visible { opacity: 1; transform: translateY(0); }
+    h2 { font-size: 2rem; margin-bottom: 1.5rem; text-align: center; }
+    .btn { background-color: #e94560; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 8px; display: inline-block; margin-top: 1rem; transition: background-color 0.3s ease; }
+    .btn:hover { background-color: #ff5e78; }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      margin: 2rem auto;
+      padding-bottom: 1rem;
+    }
+    .carousel img {
+      height: 250px;
+      border-radius: 12px;
+      scroll-snap-align: start;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .video-section, .testimonial-section, .training-section, .form-section {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .video-section iframe {
+      width: 100%;
+      max-width: 700px;
+      height: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .testimonial-section blockquote {
+      background-color: #fff;
+      padding: 1.5rem;
+      margin: 1rem auto;
+      max-width: 700px;
+      border-left: 5px solid #e94560;
+      font-style: italic;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .training-section ul {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: auto;
+    }
+    .training-section li {
+      background-color: #ffffff;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      font-weight: 500;
+    }
+    form {
+      background-color: #fff;
+      padding: 2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #e94560;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff5e78;
+    }
+    .contact-info {
+      margin-top: 2rem;
+      font-weight: 600;
+    }
+    .whatsapp-button {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721278.png" alt="Logo ExpertOption">
+    <h1>Experts of ExpertOption</h1>
+    <p>Maîtrise ExpertOption. Deviens un expert du trading numérique.</p>
+    <a href="#services" class="btn">Découvrir nos services</a>
+  </header>
+
+  <nav>
+    <a href="#about">À propos</a>
+    <a href="#services">Services</a>
+    <a href="#blog">Blog</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="carousel">
+    <img src="https://cdn.pixabay.com/photo/2017/08/10/03/30/stock-2616931_1280.jpg" alt="trading1">
+    <img src="https://cdn.pixabay.com/photo/2020/03/02/07/55/chart-4894016_1280.jpg" alt="trading2">
+    <img src="https://cdn.pixabay.com/photo/2016/11/23/14/45/stock-1853266_1280.jpg" alt="trading3">
+  </section>
+
+  <section class="video-section">
+    <h2>Introduction au trading avec ExpertOption</h2>
+    <iframe src="https://www.youtube.com/embed/Jn7FHYvy7uw" title="Tutoriel Trading" allowfullscreen></iframe>
+  </section>
+
+  <section class="testimonial-section">
+    <h2>Témoignages</h2>
+    <blockquote>"Grâce à Experts of ExpertOption, j'ai enfin compris comment fonctionne le trading et je commence à voir des résultats." – Marie, 28 ans</blockquote>
+    <blockquote>"Un accompagnement clair et motivant pour débuter sur ExpertOption. Je recommande à 100%." – Idriss, 33 ans</blockquote>
+  </section>
+
+  <section class="training-section">
+    <h2>Nos Formations</h2>
+    <ul>
+      <li>? Introduction au trading en ligne</li>
+      <li>? Maîtriser l'interface ExpertOption</li>
+      <li>? Analyser les tendances et les graphiques</li>
+      <li>? Gérer son capital et ses émotions</li>
+      <li>? Stratégies avancées pour traders confirmés</li>
+    </ul>
+  </section>
+
+  <section class="form-section" id="contact">
+    <h2>Inscrivez-vous ou contactez-nous</h2>
+    <form action="mailto:Gloireg79@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="nom" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" placeholder="Votre message ou demande" rows="5" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+    <div class="contact-info">
+      <p>?? Téléphone : 656 49 22 82</p>
+      <p>?? Email : Gloireg79@gmail.com</p>
+      <a class="whatsapp-button" href="https://wa.me/237686670348" target="_blank">?? Contact WhatsApp</a>
+    </div>
+  </section>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
